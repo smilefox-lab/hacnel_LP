@@ -15,8 +15,7 @@ html {
 body {
     font-size: 0px;
     background: white;
-    /* margin: 0;
-    padding: 0; */
+    margin: 0;
 }
 
 #container {
@@ -232,6 +231,9 @@ span.form_required_ec {
     font-weight: 100;
     display: inline-block;
     float: right !important;
+}
+.submit_bottom_ec:hover{
+    opacity: 75%;
 }
 
 .submit_bottom_ec {
