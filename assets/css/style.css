@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+	background: #222;
+}
+body {
+    font-size: 0px;
+}
+
+#container {
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+
+
+img {
+    width: 100%;
+}
+.content {
+	position: relative;
+}
+
+.first-chd {
+	z-index: 20;
+    position: absolute;
+    top: 75%;
+    right: 19%;
+    width: 35%;
+}
+
+.second-chd {
+    z-index: 20;
+    position: absolute;
+    top: 65%;
+    right: 15%;
+    width: 40%;
+}
+.third-chd {
+    z-index: 20;
+    position: absolute;
+    top: 52%;
+    right: 15%;
+    width: 40%;
+}
+
+.btn-image img {
+	width: 100%;
+	cursor: pointer;
+    border-radius: 11px;
+    box-shadow: 4px 5px 6px #c4c6c5;
+}
+
+.first-chd:hover img {
+	box-shadow: 4px 6px 5px 4px #e5a28d;
+    opacity: 75%;
+}
+
+.second-chd img:hover, .third-chd img:hover {
+    box-shadow: 4px 6px 5px 4px #49d061;
+    opacity: 75%;
+}
+
+.quz-item img.open {
+	display: none;
+}
+
+.quz-item img.close {
+	display: block;
+}
+
+.quz-panel .open-item img.open {
+	display: block;
+}
+
+.quz-panel .open-item img.close {
+	display: none;
+}
+
+.quz-panel {
+	padding-bottom: 80px;
+}
+
+.p-50 {
+	padding-bottom: 50px;
+}
+.top-to-btn-panel {
+	position: fixed;
+	bottom: 0;
+	right: calc(50% - 375px);
+	/*transform: translateX(-50%);*/
+}
+
+.top-to-btn-panel img {
+	width: 50px;
+	top:100px;
+}
+@media (max-width: 750px) {
+    .top-to-btn-panel {
+		right: 0;
+	}
+}
