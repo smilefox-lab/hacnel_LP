@@ -1,12 +1,22 @@
 * {
     box-sizing: border-box;
 }
-html {
-	scroll-behavior: smooth;
-	background: #222;
+
+@font-face {
+    font-family: 'Noto';
+    src: url(../font/NotoSerifJP-Regular.otf);
 }
+
+html {
+    scroll-behavior: smooth;
+    background: #222;
+}
+
 body {
     font-size: 0px;
+    background: white;
+    /* margin: 0;
+    padding: 0; */
 }
 
 #container {
@@ -16,17 +26,16 @@ body {
     background-color: #ffffff;
 }
 
-
-
 img {
     width: 100%;
 }
+
 .content {
-	position: relative;
+    position: relative;
 }
 
 .first-chd {
-	z-index: 20;
+    z-index: 20;
     position: absolute;
     top: 75%;
     right: 19%;
@@ -40,6 +49,7 @@ img {
     right: 15%;
     width: 40%;
 }
+
 .third-chd {
     z-index: 20;
     position: absolute;
@@ -49,14 +59,14 @@ img {
 }
 
 .btn-image img {
-	width: 100%;
-	cursor: pointer;
+    width: 100%;
+    cursor: pointer;
     border-radius: 11px;
     box-shadow: 4px 5px 6px #c4c6c5;
 }
 
 .first-chd:hover img {
-	box-shadow: 4px 6px 5px 4px #e5a28d;
+    box-shadow: 4px 6px 5px 4px #e5a28d;
     opacity: 75%;
 }
 
@@ -66,41 +76,180 @@ img {
 }
 
 .quz-item img.open {
-	display: none;
+    display: none;
 }
 
 .quz-item img.close {
-	display: block;
+    display: block;
 }
 
 .quz-panel .open-item img.open {
-	display: block;
+    display: block;
 }
 
 .quz-panel .open-item img.close {
-	display: none;
+    display: none;
 }
 
 .quz-panel {
-	padding-bottom: 80px;
+    padding-bottom: 80px;
 }
 
 .p-50 {
-	padding-bottom: 50px;
+    padding-bottom: 50px;
 }
+
 .top-to-btn-panel {
-	position: fixed;
-	bottom: 0;
-	right: calc(50% - 375px);
-	/*transform: translateX(-50%);*/
+    position: fixed;
+    bottom: 0;
+    right: calc(50% - 375px);
+    /*transform: translateX(-50%);*/
 }
 
 .top-to-btn-panel img {
-	width: 50px;
-	top:100px;
+    width: 50px;
+    top: 100px;
 }
+
 @media (max-width: 750px) {
     .top-to-btn-panel {
-		right: 0;
-	}
+        right: 0;
+    }
 }
+
+.buying-form .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buying-form .inner img {
+    width: 264px;
+    height: 42px;
+}
+
+.buying-form .inner .h3-title {
+    font-family: Noto, serif;
+    font-size: 45px;
+    font-weight: 100;
+    line-height: 48px;
+    color: #2c2b2b;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.amazon_pay_box_ec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 80px;
+    padding: 20px;
+    border: 1px solid #C3C3C3;
+}
+
+.amazon_pay_box_ec .amazon_pay_title_ec {
+    margin: 10px auto 10px auto !important;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 25px;
+    color: #df1800;
+    font-weight: bold;
+}
+
+.amazon_pay_box_ec .amazon_pay_title_ec img {
+    width: 200px !important;
+    height: 40px !important;
+}
+
+.amazon_pay_box_ec .amazon_pay_message_ec {
+    padding-top: 10px;
+    font-size: 12px;
+    line-height: 1.42857143;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333333;
+}
+
+.form_main_container_ec{
+    margin-bottom: 50px;
+}
+table.landing_form_ec {
+    border-collapse: collapse;
+    margin-bottom: 60px;
+    width: 750px;
+}
+
+.landing_form_label_ec {
+    font-family: 'Noto', serif;
+    font-size: 24px;
+    line-height: 66px;
+    color: #ffffff;
+    text-align: center;
+    background: #e95f51;
+    margin-bottom: 25px !important;
+}
+.landing_form_ec th, td{
+    border: 1px solid #C3C3C3;
+}
+.landing_form_ec th {
+    background: #fff7f8;
+    text-align: left;
+    vertical-align: text-top;
+    padding-left: 15px;
+    width: 300px;
+    font-size: 14px;
+}
+.landing_form_ec td{
+    padding: 15px 10px;
+    font-size: 12px;
+}
+.landing_form_ec select, input{
+    height: 40px;
+    padding: 10px 10px;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+}
+.landing_form_ec textarea{
+    padding: 10px 10px;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+}
+span.form_required_ec {
+    background: #ae9f79;
+    color:white;
+    padding: 2px 4px;
+    margin-right: 5px;
+    font-weight: 100;
+    display: inline-block;
+    float: right !important;
+}
+
+.submit_bottom_ec {
+    background: url("https://ec-force.s3.amazonaws.com/yblstorenet/uploads/glamorouspats/main/images/common/submit_btn.png") center;
+    width: 394px;
+    height: 74px;
+    cursor: pointer;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+    background: #fdf5f5;
+    /* border-top: 1px solid #C3C3C3; */
+}
+.footer a{
+    font-size: 35px;
+    text-decoration: none;
+}
+    
