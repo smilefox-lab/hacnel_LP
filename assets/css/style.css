@@ -97,17 +97,20 @@ img {
 .p-50 {
     padding-bottom: 50px;
 }
-
+#topToBtbn{
+    visibility: hidden;
+}
 .top-to-btn-panel {
+    visibility: show;
     position: fixed;
-    bottom: 0;
-    right: calc(50% - 375px);
-    /*transform: translateX(-50%);*/
+    bottom: 10px;
+    right: calc(50% - 385px);
+    /* display: none; */
 }
 
 .top-to-btn-panel img {
-    width: 50px;
-    top: 100px;
+    width: 40px;
+    top: 120px;
 }
 
 @media (max-width: 750px) {

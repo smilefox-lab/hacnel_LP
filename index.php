@@ -13,6 +13,8 @@
 	<!-- Favicon  -->
 	<link rel="icon" href="assets/img/favicon.png">
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+</script>
 
 <body>
 	<div id="container">
@@ -25,7 +27,7 @@
 		<div>
 			<img src="./assets/img/3.png">
 		</div>
-		<div>
+		<div class="showBuyButton">
 			<img src="./assets/img/4.png">
 		</div>
 		<div>
@@ -113,7 +115,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="buying-form" style="padding-bottom:0;"id="buy_form">
+		<div class="buying-form" style="padding-bottom:0;" id="buy_form">
 			<div class="inner">
 				<img src="./assets/img/buying_form.png" alt="Buying Form">
 				<h3 class="h3-title">
@@ -1405,16 +1407,6 @@
 			<!-- オプトイン -->
 			<input name="order[customer_attributes][optin]" type="hidden" value="1">
 
-
-			<!-- 【必須】規約同意 -->
-			<!-- <div class="agreement_view_ec">
-				<input class="validate[required]" data-errormessage="商品の注文には、各種規約に同意していただく必要がございます。"
-					data-prompt-position="topLeft" id="agree" name="agree" type="checkbox">
-				<label for="agree">
-					<a href="/shop/customer_term" target="_blank">利用規約</a> に同意して申込みます。未成年者については法定代理人の同意を得ていることを確認します。
-				</label>
-			</div> -->
-			<!-- 【必須】サブミット -->
 			<div class="submit_ec">
 				<center>
 					<input class="submit_bottom_ec" data-disable-with="" id="submit" type="submit" value="">
@@ -1422,18 +1414,27 @@
 			</div>
 		</form>
 
-		<div class="top-to-btn-panel">
+		<div id="topToBtn">
 			<a href="#buy_form" id="smooth-scroll">
 				<img src="./assets/img/arrow.png">
 			</a>
 		</div>
 		<footer class="footer">
-            <a href="#" class="logo"><h3>Hacnel</h3></a>
-            <small>Copyright©2018-2022. All Rights Reserved.</small>
-        </footer>
+			<a href="#" class="logo">
+				<h3>Hacnel</h3>
+			</a>
+			<small>Copyright©2018-2022. All Rights Reserved.</small>
+		</footer>
 	</div>
 </body>
 <script>
+	window.onscroll = function () { myFunction() };
+	function myFunction() {
+		if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
+			document.getElementById("topToBtn").className = "top-to-btn-panel";
+		}
+	}
+
 	document.addEventListener('click', (e) => {
 		const parentNode = e.target.closest('.quz-item');
 		const currentOpenItem = document.querySelector('open-item');
@@ -1441,6 +1442,8 @@
 			parentNode.classList.toggle('open-item');
 		}
 	})
+
+
 </script>
 
 </html>
